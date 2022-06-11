@@ -1,0 +1,37 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+   
+}
+header h1{
+    color: #F95556;
+    font-family: 'Yantramanav', sans-serif;
+}
+/* navbar */
+.HD {
+    padding: 1rem 1rem 0rem 1rem;
+    border-bottom: 1px solid #DDD9DA;
+    
+    
+}
+.bord{
+    border-right: 1px solid #DDD9DA;
+}
+.col-lg-2{
+    text-align: center;
+}
+/* categotiria */
+
+.cat{
+    display: flex;
+    justify-content: left;
+}
+.left-panel{
+   position: fixed;
+    width: 350px;
+    height: 100%;
+    overflow: scroll;
+}
+.commerce{
+    display: flex;
+}
+
