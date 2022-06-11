@@ -1,3 +1,6 @@
+html {
+    height: 100%;
+}
 body{
     font-family: 'Montserrat', sans-serif;
     height: 100%;
@@ -30,10 +33,11 @@ header h1{
     justify-content: left;
 }
 .ecoomerce{
+    height: 100%;
     display: flex;
 }
 .left-panel{
-    width: 25%;
+    min-width: 28%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -41,7 +45,18 @@ header h1{
 .commerce{
     display: flex;
     height: 100%;
+    width: 100%;
 }
 .stock{
     display: inline-block;
 }
+.input-group-one {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.shooping{
+    width: 100%;
+}
+
