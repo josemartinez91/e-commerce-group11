@@ -1,5 +1,5 @@
 "use strict"
-import {stockProductos} from './stock';
+import {stockProductos} from './stock.js';
 
 
 
