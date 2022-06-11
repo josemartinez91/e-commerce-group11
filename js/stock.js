@@ -1,6 +1,6 @@
 let stockProductos = [
     { id: 1, marca: "Samsung", modelo: "S21 ultra", Ram: "12 GB", color: "Negro", Cantidad: 1, Precio: 1500 } //Samsungs
-    { id: 2, marca: "Samsung", modelo: "S22 Ultra" Ram: "12 GB", color: "Negro", Cantidad: 1, Precio: 1800 }
+    { id: 2, marca: "Samsung", modelo: "S22 Ultra", Ram: "12 GB", color: "Negro", Cantidad: 1, Precio: 1800 }
     { id: 3, marca: "Samsung", modelo: "S22 Plus", Ram: "12 GB", color: "Azul", Cantidad: 1, Precio: 1200 }
     { id: 4, marca: "Samsung", modelo: "Galaxy S21 FE", Ram: "12 GB", color: "Morado", Cantidad: 1, Precio: 1000 }
     { id: 5, marca: "Iphone", modelo: "13 Pro Max", Ram: "12 GB", color: "Blanco", Cantidad: 1, Precio: 1600 } //Iphones
@@ -19,4 +19,4 @@ let stockProductos = [
     { id: 18, marca: "Sony", modelo: "Xperia Pro-I", Ram: "12 GB", color: "Gris", Cantidad: 1, Precio: 1000 } //Sony
     { id: 19, marca: "Sony", modelo: "Xperia 10 IV", Ram: "6 GB", color: "Gris", Cantidad: 1, Precio: 900 }
     { id: 20, marca: "Sony", modelo: "Xperia 1 IV", Ram: "12 GB", color: "Gris", Cantidad: 1, Precio: 1500 }
-]
+];
