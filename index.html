@@ -279,13 +279,28 @@
              
             <div >
               <div>
+                
+                </div>
                 cantidad de productos
               </div>
             </div>
             <div class="shooping mt-5">
-              <div>
-                cantidad de productos
-              </div>
+                <div>
+                   cantidad de productos
+                    <div class="row" id="product-container">
+                        <div class="col-4">
+                            <div class="card"  >
+                                <div class="card-body">
+                                    <p class="card-title">${productArray[i].marca}</p>
+                                    <h5 class="card-text">${productArray[i].modelo}</h5>
+                                    <p>Precio</p>
+                                    <h5>${productArray[i].precio}0</h5>
+                                    <button class="btn btn-primary"> Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       </div>
@@ -301,5 +316,6 @@
 >>>>>>> 53ce4eb6586b834d7cce37509729579d8a2b653b
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+   <script src="./js/script.js" type="module"></script>
 </body>
 </html>
