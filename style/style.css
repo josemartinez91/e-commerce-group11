@@ -20,18 +20,25 @@ header h1{
     text-align: center;
 }
 /* categotiria */
-
+.relativ{
+    position: relative;
+}
 .cat{
     display: flex;
     justify-content: left;
 }
 .left-panel{
-   position: fixed;
-    width: 350px;
+    position: fixed;
+    width: 20%;
     height: 100%;
     overflow: scroll;
 }
+
 .commerce{
     display: flex;
 }
-
+.stock{
+    position: absolute;
+    z-index: 999;
+    justify-content: center;
+}
