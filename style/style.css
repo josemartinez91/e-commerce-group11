@@ -1,5 +1,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%;
    
 }
 header h1{
@@ -27,18 +29,19 @@ header h1{
     display: flex;
     justify-content: left;
 }
+.ecoomerce{
+    display: flex;
+}
 .left-panel{
-    position: fixed;
-    width: 20%;
-    height: 100%;
-    overflow: scroll;
+    width: 25%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .commerce{
     display: flex;
+    height: 100%;
 }
 .stock{
-    position: absolute;
-    z-index: 999;
-    justify-content: center;
+    display: inline-block;
 }
