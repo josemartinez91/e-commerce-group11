@@ -11,7 +11,7 @@ function generateCardProducts (productArray){
                         <div class="text-center conteiner-img">
                         <a href = "./Stock.html"><img src="${productArray[i].img}" alt="img" style="width: 150px" ></a>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body carr">
                             <p class="card-title">${productArray[i].marca}</p>
                             <h5 class="card-text">${productArray[i].modelo}</h5>
                             <p>Precio</p>
