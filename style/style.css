@@ -41,7 +41,9 @@ header h1{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 .commerce{
     display: flex;
     height: 100%;
@@ -63,6 +65,7 @@ header h1{
 .card{
     min-height: 400px;
     margin: 0.5rem;
+
 }
 .conteiner-img{
     border-bottom: #949494;
@@ -70,11 +73,15 @@ header h1{
 .conteiner-img{
     padding: 1rem;
 }
+/* BOTONES DE COMPRA */
 .card-body button{
-    justify-items: center;
+    align-items: center;
+    padding: auto;
     background-color: #F95556;
     border: none;
-    border-radius: 50%;
+    width: 40px;
+    border-radius: 100%;
+    margin: 0.1rem;
 }
 .card-body button:hover{
     background-color: #ff0000;
