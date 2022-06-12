@@ -8,5 +8,4 @@ export let phones = [
     {id: 7, brand: 'samsung', type: 'galaxy' , model: 'Zfold3', precio: 19800},
     {id: 8, brand: 'samsung', type: 'galaxy' , model: 'A31', precio: 2100},
     {id: 9, brand: 'samsung', type: 'galaxy' , model: 's52', precio: 5200},
-
 ];

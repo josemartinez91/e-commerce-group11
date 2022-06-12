@@ -60,3 +60,22 @@ header h1{
     width: 100%;
 }
 
+.card{
+    min-height: 400px;
+    margin: 0.5rem;
+}
+.conteiner-img{
+    border-bottom: #949494;
+}
+.conteiner-img{
+    padding: 1rem;
+}
+.card-body button{
+    justify-items: center;
+    background-color: #F95556;
+    border: none;
+    border-radius: 50%;
+}
+.card-body button:hover{
+    background-color: #ff0000;
+}
