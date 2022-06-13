@@ -1,11 +1,57 @@
-export let phones = [
-    {id: 1, brand: 'samsung', type: 'galaxy' , model: 's21', precio: 16500},
-    {id: 2, brand: 'samsung', type: 'galaxy' , model: 's52', precio: 5200},
-    {id: 3, brand: 'samsung', type: 'galaxy' , model: 'A12', precio: 3900},
-    {id: 4, brand: 'samsung', type: 'galaxy' , model: 'A32', precio: 7000},
-    {id: 5, brand: 'samsung', type: 'galaxy' , model: 'A01', precio: 4500},
-    {id: 6, brand: 'samsung', type: 'galaxy' , model: 'A70', precio: 5300},
-    {id: 7, brand: 'samsung', type: 'galaxy' , model: 'Zfold3', precio: 19800},
-    {id: 8, brand: 'samsung', type: 'galaxy' , model: 'A31', precio: 2100},
-    {id: 9, brand: 'samsung', type: 'galaxy' , model: 's52', precio: 5200},
-];
+const stepButtonBack = document.getElementsByClassName('step__button--back');
+const stepButtonNext = document.getElementsByClassName('step__button--next');
+const progressOptions = document.querySelectorAll('.progressbar__option');
+const stepSend = document.getElementsByClassName('step__button-send')
+const maxSteps = 4;
+let currentStep = 0;
+
+console.log(progressOptions);
+
+for(const nextStep of stepButtonNext){
+    nextStep.addEventListener('click', () => {
+        progressOptions[currentStep - 1].classList.add('active');
+        currentStep += 1;
+
+        const currentForm = document.querySelector(`#step-${currentStep}`);
+        console.log(currentForm);
+        stepButtonBack.disable = false;
+        if (currentStep < maxSteps){
+            stepButtonNext.disable = true;
+            stepButtonBack.disable = false;
+        }
+    });
+}
+
+// stepButtonNext.addEventListener('click', () => {
+//     progressOptions[currentStep - 1].classList.add('completed');
+//     currentStep += 1;
+//     stepButtonBack.disable = false;
+//     if (currentStep === maxSteps){
+//         stepButtonNext.disable = true;
+//         stepButtonBack.disable = false;
+//     }
+// });
+for(const backStep of stepButtonBack){
+    backStep.addEventListener('click', () => {
+        progressOptions[currentStep - 2].classList.remove('completed');
+        currentStep -= 1;
+        stepButtonNext.disable = false;
+        stepSend.disable = true;
+        if(currentStep === 1){
+            stepButtonBack.disable= true;
+        }
+    })
+}
+// stepButtonBack.addEventListener('click', () => {
+//     progressOptions[currentStep - 2].classList.remove('completed');
+//     currentStep -= 1;
+//     stepButtonNext.disable = false;
+//     stepSend.disable = true;
+//     if(currentStep === 1){
+//         stepButtonBack.disable= true;
+//     }
+// })
+
+stepSend[0].addEventListener('click', () => {
+    location.reload();
+})
