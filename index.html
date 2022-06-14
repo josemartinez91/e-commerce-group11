@@ -30,46 +30,83 @@
             </div>
             <!-- CARRITO -->
             <div class="col col-lg-2">
-              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><img src="./assets/carrito.svg" alt="compra"><span id="contadorCarrito">0</span></button>
-                  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                      <!-- VISUALIZACION DE COMPRAS -->
-                      <h5 class="offcanvas-title" id="offcanvasRightLabel">CARRITO DE COMPRA</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><img src="./assets/carrito.svg" alt="compra"><span id="contadorCarrito">0</span></button>
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                     <!-- VISUALIZACION DE COMPRAS -->
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">CARRITO DE COMPRA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
                     <!-- COMPRAS-->
                     <div class="offcanvas-body" id="offcanvas">
                       <div class="modal-contenedor">
-                        <div class="modal-carrito">
-                          <h3>Tu orden</h3>
-                          <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                        <h3> <strong>Tu orden</strong> </h3>
+                        <div class="modal-carrito conteiner">
                           <div id="carrito-contenedor">
-                            <div class="productoEnCarrito">
-                              <p>Marca</p>  
-                              <p>Precio:  $<span id="precio">0</span></p> 
+                              <!-- <div class="productoEnCarrito">
+                                <div class="row prodcut-disegn">
+                                  <div class="col-10">
+                                    <div class="d-flex ">
+                                      <div style="width: 6rem;">
+                                        <img src="./assets/Group114.jpg" alt="image" style="width: 100%;">
+                                      </div> 
+                                      <div class="text-start">
+                                        <p class="letter">Sigo escribiendo</p>
+                                        <p> <strong>Modelo</strong> </p>  
+                                        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+                                        <p>Precio:  $<strong id="precio">0</strong></p> 
+                                      </div> 
+                                    </div>  
+                                  </div>
+                                  <div class="col-2">
+                                    <button class="boton-eliminar">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+
+                            </div>
+                             
+                          </div> -->
+                          
+                          <!-- <div class="d-felx justify-content-end">
+                            <div>
+                              <button id="completar-orden" class="pago">
+                                Procesar tu Orden
+                              </button>
+                            </div>
+                          </div> -->
+                          <!-- <div id="carrito-contenedor">
                               <button class="boton-eliminar">
                                 <i class="fas fa-trash-alt"></i>
                               </button>
-                            </div>
                           </div>
-                          <p class="precioProducto">
-                            Precio total: $<span id="precioTotal">0</span>
-                          </p>
-                          <button id="vaciar-carrito" class="boton-agregar">
-                            Vaciar carrito
-                          </button>
+                          
                           <div>
                             <br>
-                          </div>
-                          <div>
-                            <button id="completar-orden" class="boton-completar">
-                              <a href="./checkout.html">Procesar tu Orden</a> 
-                            </button>
-                          </div>
-                      ...
-                    </div>
+                          </div> -->
+                          
+                      </div>
                   </div>
-              </div>
+
+                  <div class="">
+                    <p class="precioProducto">
+                      Precio total: $<span id="precioTotal"><strong>0</strong></span>
+                    </p>
+                    <div>
+                      <button id="vaciar-carrito" class="boton-agregar pago">
+                        Vaciar carrito
+                      </button>
+                    </div>
+                    <form action="./checkout.html">
+                      <button id="completar-orden" class="pago">
+                        Proceder al pago
+                      </button>
+                    </form>
+                 </div>
+            </div>
     </header>
     <div class="row">
       <main class="container col-md-8 flex-row-reverse" id="contenedor-productos" >
