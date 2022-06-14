@@ -214,10 +214,13 @@ header h1{
 .step__footer{
     padding: 1rem 0.75rem;
     text-align: end;
+    display: flex;
 }
 .step__button{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     padding: 1rem;
+    margin: 1rem;
     background-color: #f85555;
     border: none;
     color: white;
