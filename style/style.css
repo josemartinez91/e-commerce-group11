@@ -334,12 +334,12 @@ header h1{
   /* box-shadow: 10px 10px 10px 2px #222; */
   border: 1px solid #dcd9d9;
   min-width: 100%;
-  /* opacity: 0; */
+  opacity: 0;
   transition: all .2s linear;
 }
-/* .step.active{
+.step.active{
   opacity: 1;
-} */
+}
 .step.to-left{
   margin-left: -100%;
 }
