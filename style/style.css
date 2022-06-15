@@ -388,4 +388,7 @@ header h1{
     display:none ;
 }
 
-/* Grupo 11 */
+.submit-button{
+    text-decoration: none;
+    color: white;
+}

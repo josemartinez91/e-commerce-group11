@@ -9,8 +9,7 @@ form.addEventListener('click', function(e){
     if(isButtonNext || isButtonBack){
         let currentStep = document.getElementById('step-'+ element.dataset.step);
         let jumpStep = document.getElementById('step-'+ element.dataset.to_step);
-        console.log(currentStep);
-        console.log(jumpStep);
+        
         currentStep.addEventListener('animationend', function callback(){
             currentStep.classList.remove('active');
             jumpStep.classList.add('active');
