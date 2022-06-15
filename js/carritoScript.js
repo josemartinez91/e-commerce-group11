@@ -145,7 +145,7 @@ const eliminarDelCarrito = (prodId) => {
     const indice = carrito.indexOf(item)
 
     carrito.splice(indice, 1)
-    actualizarCarrito()
+    actualizarCarrito(localStorage.clear())
 
     console.log(carrito)
 }
