@@ -3,7 +3,7 @@
 
 const contenedorProductos = document.getElementById('contenedor-productos')
 
-const contenedorCarrito = document.getElementById('carrito-contenedor')
+let contenedorCarrito = document.getElementById('carrito-contenedor')
 //SEXTO PASO
 const botonVaciar = document.getElementById('vaciar-carrito')
 //SEXTIMO PASO, MODIFICAR LOS CONTADORES
@@ -19,7 +19,7 @@ let carrito = []
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = ""
     carrito.forEach((prod) => {
-        const div = document.createElement('div')
+        let div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `   
         <div class="row prodcut-disegn">
@@ -49,10 +49,13 @@ const actualizarCarrito = () => {
 
         localStorage.setItem('carrito', JSON.stringify(carrito))
 
-    })
+    }
+    
+    )
 
     contadorCarrito.innerText = carrito.length
     console.log(carrito)
+
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
 
@@ -65,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //SEXTO PASO
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
-    actualizarCarrito()
+    actualizarCarrito(localStorage.clear())
 })
 
 stockProductos.forEach((producto) => {
@@ -109,7 +112,7 @@ const agregarAlCarrito = (prodId) => {
     if (existe) {
         const prod = carrito.map(prod => {
             if (prod.id === prodId) {
-                prod.cantidad++
+                prod.cantidad++ 
             }
         })
     } else {
