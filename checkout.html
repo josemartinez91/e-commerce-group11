@@ -13,37 +13,55 @@
     <link rel="stylesheet" href="./style/style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>e-commerce</title>
+     <title>e-commerce</title>
 </head>
 <body>  
     <!-- NAVBAR -->
     <header class="conteiner HD">
-        <div class="row me-5" >
-            <div class="col bord" >
-                <h1 >e-commerce</h1>
-            </div>
-            <div class="col col-lg-2 bord">
-             <a href="#"> <img src="./assets/user 2.svg" alt="user"></a> 
-            </div>
-            <div class="col col-lg-2 bord">
-             <a href="#">  <img src="./assets/heart 1.svg" alt="fav"></a>
-            </div>
-            <!-- CARRITO -->
-            <div class="col col-lg-2">
-              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><img src="./assets/carrito.svg" alt="compra"></button>
-                  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                      <!-- VISUALIZACION DE COMPRAS -->
-                      <h5 class="offcanvas-title" id="offcanvasRightLabel">CARRITO DE COMPRA</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="row me-5" >
+          <div class="col bord" >
+            <a href="./index.html" class="title"><h1>e-commerce</h1></a> 
+          </div>
+          <div class="col col-lg-2 bord">
+           <a href="#"> <img src="./assets/user 2.svg" alt="user"></a> 
+          </div>
+          <div class="col col-lg-2 bord">
+           <a href="#">  <img src="./assets/heart 1.svg" alt="fav"></a>
+          </div>
+          <!-- CARRITO -->
+          <div class="col col-lg-2">
+              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><img src="./assets/carrito.svg" alt="compra"><span id="contadorCarrito">0</span></button>
+              <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                   <!-- VISUALIZACION DE COMPRAS -->
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">CARRITO DE COMPRA</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                  <!-- COMPRAS-->
+                  <div class="offcanvas-body" id="offcanvas">
+                    <div class="modal-contenedor">
+                      <h3> <strong>Tu orden</strong> </h3>
+                      <div class="modal-carrito conteiner">
+                        <div id="carrito-contenedor">
+        
                     </div>
-                    <!-- COMPRAS -->
-                    <div class="offcanvas-body">
-                      ...
-                    </div>
+                </div>
+
+                <div class="">
+                  <p class="precioProducto">
+                    Precio total: $<span id="precioTotal"><strong>0</strong></span>
+                  </p>
+                  <div>
+                    <button id="vaciar-carrito" class="boton-agregar pago">
+                      Vaciar carrito
+                    </button>
                   </div>
-              </div>
-    </header>
+                  <button id="completar-orden" class="pago">
+                    Proceder al pago
+                  </button>
+               </div>
+          </div>
+  </header>
     
     <div>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -91,8 +109,8 @@
               <input type="text" name="" id="" class="step__input">
             </div>
             <div class="step__footer">
-              <button type="button" class="step__button step__button--back" data-to-step="1" data-step="2">Regresar</button>
-              <button type="button" class="step__button step__button--next" data-to-step="3" data-step="2">Siguiente</button>
+              <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
+              <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
             </div>
           </div>
           <div class="step" id="step-3">
@@ -107,8 +125,8 @@
               <input type="number" name="" id="" class="step__input">
             </div>
             <div class="step__footer">
-              <button type="button" class="step__button step__button--back" data-to-step="2" data-step="3">Regresar</button>
-              <button type="button" class="step__button step__button--next" data-to-step="4" data-step="3">Siguiente</button>
+              <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">  Regresar</button>
+              <button type="button" class="step__button step__button--next" data-to_step="4" data-step="3" onclick="clea()">Siguiente</button>
             </div>
           </div>
           <div class="step" id="step-4">
@@ -121,13 +139,25 @@
               <!-- Informacion del carrito -->
             </div>
             <div class="step__footer">
-              <button type="submit" class="step__button step__button-send"> Descargar Comprobante</button>
+              <form action="./index.html">
+                <button type="submit" class="step__button step__button-send" > <a href="./index.html" class="submit-button">Finalizar compra</a></button>
+              </form>
+             
             </div>
           </div>
         </div>
       </form>
     </div>
+    <div class="conteiner-target">
+      <div class="shooping mt-5" id="contenedor-productos" >
+        <div class="row" >
+        </div>
+    </div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/stock.js"></script>
+    <script src="./js/carritoScript.js"></script>
     <script src="./js/data.js"></script>
  </body>
  </html>
