@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //SEXTO PASO
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
-    actualizarCarrito()
+    actualizarCarrito(localStorage.clear())
 })
 
 stockProductos.forEach((producto) => {
@@ -112,7 +112,7 @@ const agregarAlCarrito = (prodId) => {
     if (existe) {
         const prod = carrito.map(prod => {
             if (prod.id === prodId) {
-                prod.cantidad++
+                prod.cantidad++ 
             }
         })
     } else {
