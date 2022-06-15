@@ -337,9 +337,9 @@ header h1{
   /* opacity: 0; */
   transition: all .2s linear;
 }
-/* .step.active{
+.step.active{
   opacity: 1;
-} */
+}
 .step.to-left{
   margin-left: -100%;
 }
@@ -382,4 +382,8 @@ header h1{
   cursor: pointer; 
   width: 50%; 
   height: 3rem; 
+}
+.submit-button{
+    text-decoration: none;
+    color: white;
 }
