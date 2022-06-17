@@ -26,11 +26,4 @@ form.addEventListener('click', function(e){
         jumpStep.classList.remove('inactive');
     }
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> listo
-=======
-
->>>>>>> 038a08eba5abb008fc7bf3b92881943db6013469
