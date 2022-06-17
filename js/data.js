@@ -27,6 +27,10 @@ form.addEventListener('click', function(e){
     }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> listo
+=======
+
+>>>>>>> 038a08eba5abb008fc7bf3b92881943db6013469
