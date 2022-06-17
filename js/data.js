@@ -1,11 +1,29 @@
-export let phones = [
-    {id: 1, brand: 'samsung', type: 'galaxy' , model: 's21', precio: 16500},
-    {id: 2, brand: 'samsung', type: 'galaxy' , model: 's52', precio: 5200},
-    {id: 3, brand: 'samsung', type: 'galaxy' , model: 'A12', precio: 3900},
-    {id: 4, brand: 'samsung', type: 'galaxy' , model: 'A32', precio: 7000},
-    {id: 5, brand: 'samsung', type: 'galaxy' , model: 'A01', precio: 4500},
-    {id: 6, brand: 'samsung', type: 'galaxy' , model: 'A70', precio: 5300},
-    {id: 7, brand: 'samsung', type: 'galaxy' , model: 'Zfold3', precio: 19800},
-    {id: 8, brand: 'samsung', type: 'galaxy' , model: 'A31', precio: 2100},
-    {id: 9, brand: 'samsung', type: 'galaxy' , model: 's52', precio: 5200},
-];
+
+let form = document.querySelector('.form-register');
+let progressOptions = document.querySelectorAll('.progressbar__option')
+
+form.addEventListener('click', function(e){
+    let element = e.target;
+    let isButtonNext = element.classList.contains('step__button--next');
+    let isButtonBack = element.classList.contains('step__button--back');
+    if(isButtonNext || isButtonBack){
+        let currentStep = document.getElementById('step-'+ element.dataset.step);
+        let jumpStep = document.getElementById('step-'+ element.dataset.to_step);
+        
+        currentStep.addEventListener('animationend', function callback(){
+            currentStep.classList.remove('active');
+            jumpStep.classList.add('active');
+            if(isButtonNext){
+                currentStep.classList.add('to-left');
+                progressOptions[element.dataset.to_step - 1].classList.add('active');
+            } else {
+                jumpStep.classList.remove('to-left');
+                progressOptions[element.dataset.step - 1].classList.remove('active');
+            }
+            currentStep.removeEventListener('animationend', callback);
+        });
+        currentStep.classList.add('inactive');
+        jumpStep.classList.remove('inactive');
+    }
+})
+
