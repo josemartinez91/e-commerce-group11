@@ -5,11 +5,11 @@ const contenedorProductos = document.getElementById('contenedor-productos')
 
 let contenedorCarrito = document.getElementById('carrito-contenedor')
 //SEXTO PASO
+
 const botonVaciar = document.getElementById('vaciar-carrito')
-//SEXTIMO PASO, MODIFICAR LOS CONTADORES
+
 const contadorCarrito = document.getElementById('contadorCarrito')
 
-//OCTAVO PASO
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
@@ -31,7 +31,9 @@ const actualizarCarrito = () => {
               <div class="text-start">
                 <p class="letter">${prod.marca}</p>
                 <p> <strong>${prod.modelo}</strong> </p>  
-                <p>Cantidad: <span id="cantidad"><strong>${prod.cantidad}</strong></span></p>
+                <p>Cantidad: 
+                 </p>
+                 <input class ="size" id="cantidad01" type="text" onkeyup="calc()" value="${prod.cantidad}" />
                 <p>Precio:  $<strong id="precio">${prod.precio}</strong></p> 
               </div> 
             </div>  
@@ -59,13 +61,28 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
 
+
+
+
+function calc(){
+  let cantid = document.getElementById("cantidad01").value
+  precioTotal.innerText = carrito.reduce((acc, prod) => acc + cantid * prod.precio, 0)
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
     }
 })
-//SEXTO PASO
+
+function clea(){
+  carrito.length = 0
+    actualizarCarrito(localStorage.clear())
+}
+
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito(localStorage.clear())
@@ -129,7 +146,7 @@ const eliminarDelCarrito = (prodId) => {
     const indice = carrito.indexOf(item)
 
     carrito.splice(indice, 1)
-    actualizarCarrito()
+    actualizarCarrito(localStorage.clear())
 
     console.log(carrito)
 }
