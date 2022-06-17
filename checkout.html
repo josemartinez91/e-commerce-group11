@@ -62,101 +62,103 @@
                </div>
           </div>
   </header>
-    
+  <div>
     <div>
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Celular</li>
-            </ol>
-          </nav>
-    </div>
-    <div class="container-checkout">
-      <form action="" class="form-register">
-        <div class="form-register__header">
-          <ul class="progressbar">
-            <li class="progressbar__option active">Tus datos</li>
-            <li class="progressbar__option">Envio</li>
-            <li class="progressbar__option">Pago</li>
-            <li class="progressbar__option">Comprobante</li>
-          </ul>
-        </div>
-        <div class="form-register__body">
-          <div class="step active" id="step-1">
-            <div class="step__body">
-              <p>Correo</p>
-              <input type="email" name="Correo" id="" class="step__input">
-              <p>Nombre completo</p>
-              <input type="text" name="Nombre" id="" class="step__input">
-              <p>Telefono</p>
-              <input type="tel" name="" id="" class="step__input">
-            </div>
-            <div class="step__footer">
-              <button type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Siguiente</button>
-            </div>
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Celular</li>
+          </ol>
+        </nav>
+  </div>
+  <div class="container-checkout">
+    <form action="" class="form-register">
+      <div class="form-register__header">
+        <ul class="progressbar">
+          <li class="progressbar__option active">Tus datos</li>
+          <li class="progressbar__option">Envio</li>
+          <li class="progressbar__option">Pago</li>
+          <li class="progressbar__option">Comprobante</li>
+        </ul>
+      </div>
+      <div class="form-register__body">
+        <div class="step active" id="step-1">
+          <div class="step__body">
+            <p>Correo</p>
+            <input type="email" name="Correo" id="" class="step__input">
+            <p>Nombre completo</p>
+            <input type="text" name="Nombre" id="" class="step__input">
+            <p>Telefono</p>
+            <input type="tel" name="" id="" class="step__input">
           </div>
-          <div class="step" id="step-2">
-            <div class="step__body">
-              <p>Calle</p>
-              <input type="text" class="step__input">
-              <p>Colonia</p>
-              <input type="text" name="" id="" class="step__input">
-              <p>Codigo Postal</p>
-              <input type="number" name="" id="" class="step__input">
-              <p>Ciudad</p>
-              <input type="text" class="step__input">
-              <p>Referencias</p>
-              <input type="text" name="" id="" class="step__input">
-            </div>
-            <div class="step__footer">
-              <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
-              <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
-            </div>
-          </div>
-          <div class="step" id="step-3">
-            <div class="step__body">
-              <p>Numero de tarjeta</p>
-              <input type="number" name="" id="" class="step__input">
-              <p>Nombre del titular</p>
-              <input type="text" name="" id="" class="step__input">
-              <p>Fecha de expiracion</p>
-              <input type="date" name="" id="" class="step__input">
-              <p>CVV</p>
-              <input type="number" name="" id="" class="step__input">
-            </div>
-            <div class="step__footer">
-              <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">  Regresar</button>
-              <button type="button" class="step__button step__button--next" data-to_step="4" data-step="3" onclick="clea()">Siguiente</button>
-            </div>
-          </div>
-          <div class="step" id="step-4">
-            <div class="step__body">
-              <img src="./assets/check_circle_outline 1.svg" alt="">
-              <p>Felicidades!</p>
-              <p>Tu compra se realizo con exito</p>
-            </div>
-            <div class="step__body">
-              <!-- Informacion del carrito -->
-            </div>
-            <div class="step__footer">
-              <form action="./index.html">
-                <button type="submit" class="step__button step__button-send" > <a href="./index.html" class="submit-button">Finalizar compra</a></button>
-              </form>
-             
-            </div>
+          <div class="step__footer">
+            <button type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Siguiente</button>
           </div>
         </div>
-      </form>
-    </div>
-    <div class="conteiner-target">
-      <div class="shooping mt-5" id="contenedor-productos" >
-        <div class="row" >
+        <div class="step" id="step-2">
+          <div class="step__body">
+            <p>Calle</p>
+            <input type="text" class="step__input">
+            <p>Colonia</p>
+            <input type="text" name="" id="" class="step__input">
+            <p>Codigo Postal</p>
+            <input type="number" name="" id="" class="step__input">
+            <p>Ciudad</p>
+            <input type="text" class="step__input">
+            <p>Referencias</p>
+            <input type="text" name="" id="" class="step__input">
+          </div>
+          <div class="step__footer">
+            <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
+            <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
+          </div>
         </div>
-    </div>
+        <div class="step" id="step-3">
+          <div class="step__body">
+            <p>Numero de tarjeta</p>
+            <input type="number" name="" id="" class="step__input">
+            <p>Nombre del titular</p>
+            <input type="text" name="" id="" class="step__input">
+            <p>Fecha de expiracion</p>
+            <input type="date" name="" id="" class="step__input">
+            <p>CVV</p>
+            <input type="number" name="" id="" class="step__input">
+          </div>
+          <div class="step__footer">
+            <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">  Regresar</button>
+            <button type="button" class="step__button step__button--next" data-to_step="4" data-step="3" onclick="clea()">Siguiente</button>
+          </div>
+        </div>
+        <div class="step" id="step-4">
+          <div class="step__body">
+            <img src="./assets/check_circle_outline 1.svg" alt="">
+            <p>Felicidades!</p>
+            <p>Tu compra se realizo con exito</p>
+          </div>
+          <div class="step__body">
+            <!-- Informacion del carrito -->
+          </div>
+          <div class="step__footer">
+            <form action="./index.html">
+              <button type="submit" class="step__button step__button-send" > <a href="./index.html" class="submit-button">Finalizar compra</a></button>
+            </form>
+           
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="conteiner-target">
+    <div class="shooping mt-5" id="contenedor-productos" >
+      <div class="row" >
+      </div>
+  </div>
 </div>
+  </div>  
+    
 <!-- FOOTER -->
-<div>
-  <section class="footer-style-6 footer-dark-style-6 mt-50 pt-70 pb-100" style="display: block; margin-top: -220px"; id="footer">
+<footer>
+  <section class="footer-style-6 footer-dark-style-6 mt-50 pt-70 pb-100" style="display: block; margin-top: 150px"; id="footer">
    <div class="container">
      <div class="footer-logo">
        <div class="col bord">
@@ -206,7 +208,7 @@
          </div>
        </div>
        <div class="col-lg-8">
-         <div class="footer-link-widget" style="display: flex;justify-content: space-between; margin-left: 50px; width: 900px;">
+         <div class="footer-link-widget" style="display: flex;justify-content: space-between; margin-left: 50px; width: 100%;">
            <div class="footer-link">
              <h5 class="footer-title">Categories</h5>
  
@@ -260,7 +262,8 @@
      </div>
    </div>
  </section>
-     </div>
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./js/stock.js"></script>
